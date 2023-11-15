@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp"
+    android:animateLayoutChanges="true"
+    >
+
+
+    <TextView
+        android:id="@+id/fullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/contactIconContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Contact Name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contactIconContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullName"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toTopOf="@id/contactDetailButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="07777873337" />
+
+        <ImageButton
+            android:id="@+id/contactCallButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="call icon"
+            app:layout_constraintBottom_toBottomOf="@+id/contactDetailButton"
+            app:layout_constraintEnd_toStartOf="@+id/contactEditButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/contactDetailButton"
+            app:srcCompat="@drawable/baseline_call_24" />
+
+        <ImageButton
+            android:id="@+id/contactEditButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="edit icon"
+            app:layout_constraintBottom_toBottomOf="@+id/contactDetailButton"
+            app:layout_constraintEnd_toStartOf="@+id/contactDetailButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/contactCallButton"
+            app:layout_constraintTop_toTopOf="@+id/contactDetailButton"
+            app:srcCompat="@drawable/baseline_edit_24" />
+
+        <ImageButton
+            android:id="@+id/contactDetailButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="detail icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/contactEditButton"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
+            app:srcCompat="@drawable/baseline_info_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

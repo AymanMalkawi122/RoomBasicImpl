@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/contactListFragment">
+
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.example.roombasicimpl.presentation.ContactListFragment"
+        android:label="fragment_contact_list"
+        tools:layout="@layout/fragment_contact_list" />
+
+
+    <fragment
+        android:id="@+id/callHistoryFragment"
+        android:name="com.example.roombasicimpl.presentation.CallHistoryFragment"
+        android:label="fragment_call_history"
+        tools:layout="@layout/fragment_call_history" />
+
+    <fragment
+        android:id="@+id/keypadFragment"
+        android:name="com.example.roombasicimpl.presentation.KeypadFragment"
+        android:label="fragment_keypad"
+        tools:layout="@layout/fragment_keypad" />
+
+    <fragment
+        android:id="@+id/contactFormFragment"
+        android:name="com.example.roombasicimpl.presentation.ContactFormFragment"
+        android:label="fragment_call_history"
+        tools:layout="@layout/fragment_contact_form" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/contactSearchFragment"
+        android:name="com.example.roombasicimpl.presentation.ContactSearchFragment"
+        android:label="fragment_call_history"
+        tools:layout="@layout/fragment_contact_search" />
+
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="com.example.roombasicimpl.presentation.ContactDetailFragment"
+        android:label="fragment_call_history"
+        tools:layout="@layout/fragment_contact_detail" >
+    </fragment>
+
+
+</navigation>
